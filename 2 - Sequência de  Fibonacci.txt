@@ -1,0 +1,45 @@
+
+#include <stdio.h>
+
+int main() 
+{
+
+  //Declaração de variáveis
+    int nxt, a=0, b=1, i, num, lim=10000;
+
+  //Entrada de dados
+  printf("Insira o número que você deseja testar: ");
+  scanf("%d", &num);
+  
+  //Teste de compatibilidade com os requisitos
+  if (num<0){
+    printf("Número inválido, insira um número maior que 0: ");
+    scanf("%d", &num);
+  }
+  
+  
+  for(i=1;i<=lim;i++) 
+  {
+    
+  //Afirmativa
+    if(nxt == num)
+    {
+        printf("O número %d faz parte da sequência de Fibonacci", num);
+      break;
+    }
+
+ //Teste lógico   
+    nxt=a+b;
+    a=b;
+    b=nxt;
+  }
+
+  //Negativa
+    if(nxt != num)
+    {
+      printf("O numero %d não faz parte da sequência de Fibonacci", num);
+    }
+
+  
+    return 0;
+}

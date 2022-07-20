@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+
+  //Declaração de variáveis
+  char frase[20], fraseinv[20];
+  int i, j, fim;
+
+  //Entrada e leitura de dados
+  printf("Insira uma palavra de até 20 caracteres: \n");
+  fgets( frase, 20, stdin);
+
+  //Teste lógico 
+  for(fim=0;frase[fim] != '0' && frase[fim] != '\n'; fim++);
+
+  //Contagem e reversão de caracteres
+  for(i=fim-1, j=0; j<fim; i--, j++)
+    {  
+    fraseinv[j] = frase[i];
+    fraseinv[fim] = '\0';
+    }
+
+  //Saída de dados
+    printf("Inversa da palavra: \n%s\n", fraseinv);
+
+  return 0;
+}
